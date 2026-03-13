@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Web Developer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">MyPortfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi, I'm Mohd Javed</h1>
+                <p>Systems Engineer | Java & Spring Boot Specialist | Microservices Architect</p>
+                <a href="#contact" class="btn btn-primary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="Profile.jpg" alt="Profile Picture" class="profile-pic">
+                <div class="about-text">
+                    <p>Systems Engineer with 4+ years of experience in designing and developing backend applications using Java and Spring Boot. Skilled in building scalable microservices and RESTful APIs. Proficient in Oracle PL/SQL for efficient database management.</p>
+                    <p>I specialize in developing enterprise-grade applications and have a proven track record of solving complex technical challenges, optimizing application performance, and delivering robust solutions within Agile/Scrum teams.</p>
+                    <div class="contact-info">
+                        <p><strong>📍</strong> Sant Kabir Nagar, Uttar Pradesh – 272170</p>
+                        <p><strong>📞</strong> +91 8545047364</p>
+                        <p><strong>📧</strong> javedkhan1078692@mail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Key Achievements & Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300x200" alt="GBaMS Project">
+                    <h3>Global Business Associate Management System (GBaMS)</h3>
+                    <p>Enterprise application for Vendor Lifecycle Management including vendor registration, contract management, recruitment, invoicing, and claim reimbursement.</p>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-small">Details</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Automation Project">
+                    <h3>Invoicing & Claims Automation</h3>
+                    <p>Automated invoicing and claims processing system using Java & Spring Boot, reducing manual errors and improving data accuracy significantly.</p>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-small">Details</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Performance Optimization">
+                    <h3>Query Performance Optimization</h3>
+                    <p>Optimized complex SQL queries by removing unnecessary UPPER() functions and redundant joins, improving response time and system performance.</p>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-small">Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h3>Spring Boot & Java</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>Microservices Architecture</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>Oracle PL/SQL & Database Design</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 92%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>REST APIs & Integration</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 88%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>Agile/Scrum Methodologies</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>Web Security & Penetration Testing</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+            <p id="formMessage"></p>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2>Education & Certifications</h2>
+            <div class="education-list">
+                <div class="education-item">
+                    <h3>B.Tech in Electronics & Communication Engineering</h3>
+                    <p><strong>KIPM College of Engineering and Technology</strong></p>
+                    <p class="text-muted">GIDA Gorakhpur, Uttar Pradesh – December 2021</p>
+                </div>
+                <div class="education-item">
+                    <h3>Core Java Certification</h3>
+                    <p><strong>Udemy</strong></p>
+                    <p class="text-muted">January 17, 2023</p>
+                </div>
+                <div class="education-item">
+                    <h3>Web Application & Penetration Testing Certification</h3>
+                    <p><strong>Udemy</strong></p>
+                    <p class="text-muted">January 2, 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Mohd Javed. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/MOHDJAVED1" title="LinkedIn" target="_blank">LinkedIn</a>
+                <a href="https://github.com/MOHDJAVED1" title="GitHub" target="_blank">GitHub</a>
+                <a href="mailto:javedkhan1078692@mail.com" title="Email">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
