@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Web Developer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- CAPTCHA Modal (Appears First) -->
+    <div id="captchaModal" class="captcha-modal show">
+        <div class="captcha-modal-content">
+            <div class="captcha-header">
+                <h2>Welcome to My Portfolio</h2>
+                <p>Please verify that you're human</p>
+            </div>
+            <div class="captcha-challenge-box">
+                <span id="captchaQuestion" class="captcha-question">3 + 5 = ?</span>
+            </div>
+            <div class="captcha-options">
+                <label class="captcha-option">
+                    <input type="radio" name="captchaAnswer" value="option1">
+                    <span id="option1">6</span>
+                </label>
+                <label class="captcha-option">
+                    <input type="radio" name="captchaAnswer" value="option2">
+                    <span id="option2">7</span>
+                </label>
+                <label class="captcha-option">
+                    <input type="radio" name="captchaAnswer" value="option3">
+                    <span id="option3">8</span>
+                </label>
+                <label class="captcha-option">
+                    <input type="radio" name="captchaAnswer" value="option4">
+                    <span id="option4">9</span>
+                </label>
+            </div>
+            <p id="captchaError" class="captcha-error"></p>
+            <button id="captchaSubmitBtn" class="btn btn-primary" style="width: 100%; margin-top: 20px;">Verify & Continue</button>
+        </div>
+    </div>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#testimonials">Appreciations</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi, I'm Mohd Javed</h1>
+                <p>Systems Engineer | Java & Spring Boot | Microservices</p>
+                <a href="#contact" class="btn btn-primary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="Profile.jpg" alt="Profile Picture" class="profile-pic">
+                <div class="about-text">
+                    <p>Systems Engineer with 4+ years of experience in designing and developing backend applications using Java and Spring Boot. Skilled in building scalable microservices and RESTful APIs. Proficient in Oracle PL/SQL for efficient database management.</p>
+                    <p>I specialize in developing enterprise-grade applications and have a proven track record of solving complex technical challenges, optimizing application performance, and delivering robust solutions within Agile/Scrum teams.</p>
+                    <div class="contact-info">
+                        <p><strong>📍</strong> Sant Kabir Nagar, Uttar Pradesh – 272170</p>
+                        <p><strong>📞</strong> +91 8545047364</p>
+                        <p><strong>📧</strong> javedkhan1078692@mail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Key Achievements & Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">🏢</div>
+                    <h3>Global Business Associate Management System (GBaMS)</h3>
+                    <p><strong>Enterprise Vendor Lifecycle Management Platform</strong></p>
+                    <p style="font-size: 13px; margin: 10px 0;">Core Features:</p>
+                    <ul style="padding: 0 20px; font-size: 13px; color: var(--text-light);">
+                        <li>Vendor Registration & Onboarding</li>
+                        <li>Contract Management</li>
+                        <li>Recruitment Management</li>
+                        <li>Invoice Processing</li>
+                        <li>Claim Reimbursement</li>
+                    </ul>
+                    <p style="padding: 0 20px; font-size: 13px; margin-top: 10px; font-weight: bold;">🔐 Security Implementation:</p>
+                    <ul style="padding: 0 20px; font-size: 13px; color: var(--text-light);">
+                        <li>RSA encryption for secure key exchange</li>
+                        <li>AES-256 encryption for API payloads</li>
+                        <li>File hashing for integrity validation</li>
+                        <li>Payload manipulation detection</li>
+                    </ul>
+                    <p style="padding: 0 20px; font-size: 12px; margin-top: 10px; color: #667eea;"><strong>Tech Stack:</strong> Java | Spring Boot | Angular | Oracle SQL | REST APIs</p>
+                    <div class="project-links">
+                        <a href="https://gbamsvms.tcsapps.com/gbams/" class="btn btn-primary" target="_blank">View Details</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">📄</div>
+                    <h3>Document Management System</h3>
+                    <p><strong>Secure Document Management & Workflow Platform</strong></p>
+                    <p style="font-size: 13px; margin: 10px 0;">Core Features:</p>
+                    <ul style="padding: 0 20px; font-size: 13px; color: var(--text-light);">
+                        <li>Secure document upload & storage</li>
+                        <li>Document version management</li>
+                        <li>Update & delete operations</li>
+                        <li>Secure file handling & validation</li>
+                        <li>API-based document access</li>
+                    </ul>
+                    <p style="padding: 0 20px; font-size: 12px; margin-top: 10px; color: #667eea;"><strong>Tech Stack:</strong> Java | Spring Boot | Angular | MySQL | REST APIs</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">⚡</div>
+                    <h3>Query Performance Optimization</h3>
+                    <p><strong>Database Performance Tuning & SQL Optimization</strong></p>
+                    <ul style="padding: 0 20px; font-size: 13px; color: var(--text-light); margin: 10px 0;">
+                        <li>Optimized complex SQL queries for production systems</li>
+                        <li>Removed unnecessary UPPER() functions & redundant joins</li>
+                        <li>Improved response time and system performance</li>
+                        <li>Database indexing & execution plan optimization</li>
+                    </ul>
+                    <p style="padding: 0 20px; font-size: 12px; color: #667eea;"><strong>Tech Stack:</strong> Oracle SQL | Query Optimization | Database Design</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Core Focus Areas</h2>
+            <div class="focus-areas">
+                <div class="focus-item">
+                    <span class="focus-icon">✔</span>
+                    <p><strong>Backend Development</strong> - Java & Spring Boot expertise</p>
+                </div>
+                <div class="focus-item">
+                    <span class="focus-icon">✔</span>
+                    <p><strong>Secure REST APIs</strong> - Building scalable, protected API solutions</p>
+                </div>
+                <div class="focus-item">
+                    <span class="focus-icon">✔</span>
+                    <p><strong>Angular UI Development</strong> - Frontend expertise and user experience</p>
+                </div>
+                <div class="focus-item">
+                    <span class="focus-icon">✔</span>
+                    <p><strong>Production Debugging</strong> - Identifying and resolving complex issues</p>
+                </div>
+                <div class="focus-item">
+                    <span class="focus-icon">✔</span>
+                    <p><strong>Database Optimization</strong> - Query optimization and performance tuning</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section class="skills" style="background-color: var(--bg-light);">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h3>Spring Boot & Java</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>Microservices Architecture</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>Oracle PL/SQL & Database Design</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 92%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>REST APIs & Integration</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 88%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>Agile/Scrum Methodologies</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>Web Security & Penetration Testing</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials & Appreciations Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>Team Appreciations & Recognitions</h2>
+            <div class="appreciation-gallery">
+                <div class="appreciation-card">
+                    <img src="appriciations/01.jpg" alt="Appreciation Card 1">
+                </div>
+                <div class="appreciation-card">
+                    <img src="appriciations/02.jpg" alt="Appreciation Card 2">
+                </div>
+                <div class="appreciation-card">
+                    <img src="appriciations/03.jpg" alt="Appreciation Card 3">
+                </div>
+                <div class="appreciation-card" style="display: none;">
+                    <img src="appriciations/04.jpg" alt="Appreciation Card 4">
+                </div>
+                <div class="appreciation-card" style="display: none;">
+                    <img src="appriciations/5.jpeg" alt="Appreciation Card 5">
+                </div>
+                <div class="appreciation-card" style="display: none;">
+                    <img src="appriciations/6.jpeg" alt="Appreciation Card 6">
+                </div>
+                <div class="appreciation-card" style="display: none;">
+                    <img src="appriciations/7.jpeg" alt="Appreciation Card 7">
+                </div>
+                <div class="appreciation-card" style="display: none;">
+                    <img src="appriciations/8.jpeg" alt="Appreciation Card 8">
+                </div>
+                <div class="appreciation-card" style="display: none;">
+                    <img src="appriciations/9.jpeg" alt="Appreciation Card 9">
+                </div>
+                <div class="appreciation-card" style="display: none;">
+                    <img src="appriciations/10.jpeg" alt="Appreciation Card 10">
+                </div>
+                <div class="appreciation-card" style="display: none;">
+                    <img src="appriciations/11.jpeg" alt="Appreciation Card 11">
+                </div>
+                <div class="appreciation-card" style="display: none;">
+                    <img src="appriciations/12.jpeg" alt="Appreciation Card 12">
+                </div>
+                <div class="appreciation-card" style="display: none;">
+                    <img src="appriciations/13.jpeg" alt="Appreciation Card 13">
+                </div>
+                <div class="appreciation-card" style="display: none;">
+                    <img src="appriciations/14.jpeg" alt="Appreciation Card 14">
+                </div>
+                <div class="appreciation-card" style="display: none;">
+                    <img src="appriciations/15.jpeg" alt="Appreciation Card 15">
+                </div>
+                <div class="appreciation-card" style="display: none;">
+                    <img src="appriciations/16.jpeg" alt="Appreciation Card 16">
+                </div>
+            </div>
+            <div class="appreciation-action">
+                <button id="openAllAppreciations" class="btn btn-primary">View All Appreciations</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appreciation Pagination Modal -->
+    <div id="appreciationModal" class="appreciation-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="pagination-viewer">
+                <div id="paginationDisplay" class="pagination-display">
+                    <!-- Appreciation content will be loaded here -->
+                </div>
+                <div class="pagination-controls">
+                    <button id="prevBtn" class="pagination-btn">← Previous</button>
+                    <span id="pagination-info" class="pagination-info">1 / 16</span>
+                    <button id="nextBtn" class="pagination-btn">Next →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" id="senderName" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" id="senderEmail" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Subject" id="emailSubject" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message [ As a full email body ]" id="messageBody" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+            <p id="formMessage"></p>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2>Education & Certifications</h2>
+            <div class="education-list">
+                <div class="education-item">
+                    <h3>B.Tech in Electronics & Communication Engineering</h3>
+                    <p><strong>KIPM College of Engineering and Technology</strong></p>
+                    <p class="text-muted">GIDA Gorakhpur, Uttar Pradesh – December 2021</p>
+                </div>
+                <div class="education-item">
+                    <h3>Core Java Certification</h3>
+                    <p><strong>Udemy</strong></p>
+                    <p class="text-muted">January 17, 2023</p>
+                </div>
+                <div class="education-item">
+                    <h3>Web Application & Penetration Testing Certification</h3>
+                    <p><strong>Udemy</strong></p>
+                    <p class="text-muted">January 2, 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2>Professional Certifications</h2>
+            <div class="certification-gallery">
+                <div class="certification-card">
+                    <div class="cert-icon">📜</div>
+                    <h3>AWS Certified DevOps Engineer</h3>
+                    <p>Cloud Infrastructure & Deployment</p>
+                </div>
+                <div class="certification-card">
+                    <div class="cert-icon">📜</div>
+                    <h3>AWS Developer Associate</h3>
+                    <p>Application Development</p>
+                </div>
+                <div class="certification-card">
+                    <div class="cert-icon">📜</div>
+                    <h3>Azure Administrator</h3>
+                    <p>Cloud Administration</p>
+                </div>
+            </div>
+            <div class="certification-action">
+                <button id="openAllCertifications" class="btn btn-primary">View Full Certifications</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certification Modal -->
+    <div id="certificationModal" class="certification-modal">
+        <div class="modal-content">
+            <span class="close-cert-modal">&times;</span>
+            <div class="cert-header">
+                <h3 id="certTitle">Certificate</h3>
+            </div>
+            <div class="cert-viewer">
+                <div id="certDisplay">
+                    <!-- Certificate image will load here -->
+                </div>
+            </div>
+            <div class="cert-pagination">
+                <button id="certPrevBtn" class="pagination-btn">← Previous</button>
+                <span id="certInfo" class="pagination-info">1 / 3</span>
+                <button id="certNextBtn" class="pagination-btn">Next →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Mohd Javed. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/MOHDJAVED1" title="LinkedIn" target="_blank">LinkedIn</a>
+                <a href="https://github.com/MOHDJAVED1" title="GitHub" target="_blank">GitHub</a>
+                <a href="mailto:javedkhan1078692@mail.com" title="Email">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
