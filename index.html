@@ -78,7 +78,13 @@
         <div class="container">
             <h2>About Me</h2>
             <div class="about-content">
-                <img src="Profile.jpg" alt="Profile Picture" class="profile-pic">
+                <div class="profile-pic-container">
+                    <img id="profilePicture" src="Profile.jpg" alt="Profile Picture" class="profile-pic">
+                    <div class="profile-overlay">
+                        <button id="uploadProfileBtn" class="upload-btn" title="Click to change profile photo">📷 Change Photo</button>
+                    </div>
+                </div>
+                <input type="file" id="profilePhotoInput" accept="image/*" style="display: none;">
                 <div class="about-text">
                     <p>Systems Engineer with 4+ years of experience in designing and developing backend applications using Java and Spring Boot. Skilled in building scalable microservices and RESTful APIs. Proficient in Oracle PL/SQL for efficient database management.</p>
                     <p>I specialize in developing enterprise-grade applications and have a proven track record of solving complex technical challenges, optimizing application performance, and delivering robust solutions within Agile/Scrum teams.</p>

@@ -1,3 +1,139 @@
+// ========================================
+// PROFILE PHOTO UPLOAD FEATURE
+// ========================================
+
+const PROFILE_PHOTO_KEY = 'portfolio_profile_photo';
+
+// Get profile photo elements
+const uploadProfileBtn = document.getElementById('uploadProfileBtn');
+const profilePhotoInput = document.getElementById('profilePhotoInput');
+const profilePicture = document.getElementById('profilePicture');
+
+// Load stored profile photo on page load
+window.addEventListener('load', () => {
+    const storedPhoto = localStorage.getItem(PROFILE_PHOTO_KEY);
+    if (storedPhoto) {
+        profilePicture.src = storedPhoto;
+    }
+});
+
+// Trigger file input when upload button is clicked
+if (uploadProfileBtn) {
+    uploadProfileBtn.addEventListener('click', () => {
+        profilePhotoInput.click();
+    });
+}
+
+// Handle file selection and upload
+if (profilePhotoInput) {
+    profilePhotoInput.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        
+        if (!file) return;
+        
+        // Validate file type
+        const validTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'image/webp'];
+        if (!validTypes.includes(file.type)) {
+            showProfilePhotoNotification('❌ Please upload a valid image file (JPG, PNG, GIF, WebP)', 'error');
+            return;
+        }
+        
+        // Validate file size (max 5MB)
+        const maxSize = 5 * 1024 * 1024;
+        if (file.size > maxSize) {
+            showProfilePhotoNotification('❌ File size must be less than 5MB', 'error');
+            return;
+        }
+        
+        // Read the file and store it
+        const reader = new FileReader();
+        reader.onload = (event) => {
+            try {
+                // Save the image data to localStorage
+                localStorage.setItem(PROFILE_PHOTO_KEY, event.target.result);
+                
+                // Update the profile picture
+                profilePicture.src = event.target.result;
+                
+                // Show success message
+                showProfilePhotoNotification('✅ Profile photo updated successfully!', 'success');
+                
+                // Reset the input
+                profilePhotoInput.value = '';
+            } catch (error) {
+                // Handle localStorage quota exceeded
+                if (error.name === 'QuotaExceededError') {
+                    showProfilePhotoNotification('❌ Storage quota exceeded. Please use a smaller image.', 'error');
+                } else {
+                    showProfilePhotoNotification('❌ Error updating profile photo. Please try again.', 'error');
+                }
+            }
+        };
+        
+        reader.onerror = () => {
+            showProfilePhotoNotification('❌ Error reading the file. Please try again.', 'error');
+        };
+        
+        reader.readAsDataURL(file);
+    });
+}
+
+// Show notification for profile photo updates
+function showProfilePhotoNotification(message, type) {
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = `profile-photo-notification ${type}`;
+    notification.textContent = message;
+    notification.style.cssText = `
+        position: fixed;
+        top: 100px;
+        right: 20px;
+        padding: 15px 20px;
+        background-color: ${type === 'success' ? '#10b981' : '#ef4444'};
+        color: white;
+        border-radius: 5px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        z-index: 2000;
+        animation: slideIn 0.3s ease;
+        font-weight: 600;
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Remove notification after 4 seconds
+    setTimeout(() => {
+        notification.style.animation = 'slideOut 0.3s ease';
+        setTimeout(() => notification.remove(), 300);
+    }, 4000);
+}
+
+// Add CSS animations for notifications
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes slideIn {
+        from {
+            transform: translateX(400px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes slideOut {
+        from {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateX(400px);
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(style);
+
 // Mobile Menu Toggle
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
